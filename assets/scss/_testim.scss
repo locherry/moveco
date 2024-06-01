@@ -48,7 +48,7 @@ section#testim {
         }
 
         &:hover {
-            color: #ea830e;
+            color: var(--primary);
         }
 
         &.left {
@@ -89,8 +89,8 @@ section#testim {
 
         & .dot.active,
         & .dot:hover {
-            background: #ea830e;
-            border-color: #ea830e;
+            background: var(--primary);
+            border-color: var(--primary);
         }
 
         & .dot.active {
@@ -136,14 +136,14 @@ section#testim {
             }
 
             h2 {
-                color: #ea830e;
+                color: var(--primary);
                 font-size: 1em;
                 margin: 15px 0;
                 margin-bottom: 0;
             }
 
             h3 {
-                color: #eea451;
+                color: var(--primary-l);
                 font-size: .8em;
                 margin: 15px 0;
                 margin-top: 0;
@@ -159,7 +159,7 @@ section#testim {
 
             &.active {
                 z-index: 1;
-                background-color: rgba(6, 45, 77, 0.7);
+                background-color: var(--primary-dd);
 
                 .img img {
                     animation: testim-show .5s ease-in-out forwards;

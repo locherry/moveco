@@ -24,7 +24,8 @@ header {
             transform: rotate(-90deg);
         }
         &:focus, &:hover{
-            background-color: #ea830e;
+            background-color: var(--primary-l);
+            box-shadow: 0px 0px 5px 2px  var(--primary);
         }
         &.visible{
             cursor: pointer;
@@ -39,11 +40,8 @@ nav {
     position: fixed;
     z-index: 900;
     background-image: linear-gradient(to left, #0f0f0f 0%, #282828 100%);
-    font-family: "MVBoli", helvetica;
     display: flex;
     justify-content: space-evenly;
-    // padding-right: 4em;
-    // align-items: center;
 
     .nav-list {
         display: flex;
@@ -57,7 +55,6 @@ nav {
             margin: 0 1em;
             transition: color 0.3s;
             text-decoration: none;
-            font-family: 'Constantine', sans-serif;
 
             /* underlines and colorize the active item */
             &::before {
@@ -67,14 +64,14 @@ nav {
                 height: 2px;
                 bottom: 0;
                 border-radius: 1px;
-                background-color: #0e7baa;
+                background-color: var(--primary);
                 transform: scaleX(0);
                 transition: transform 300ms cubic-bezier(0.39, 0.58, 0.57, 1);
             }
 
             &.active,
             &:hover {
-                color: #0e7baa;
+                color: var(--primary);
             }
 
             &.active::before,
@@ -97,11 +94,10 @@ nav {
         align-items: center;
         background-color: #fafafa;
         border-radius: 8px;
-        font-family: 'Constantine', fantasy;
         font-size: larger;
         color: white;
-        background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
-        .logo {
+        background: white;
+        img.logo {
             max-width: 130px;
             user-select: none;
             // height: 100%;
@@ -112,6 +108,11 @@ nav {
 
 
 @media only screen and (max-width: 750px) {
+    nav{
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     nav div {
         width: 60px;
     }
@@ -132,8 +133,8 @@ nav {
 
         &::before{
             content: 'Quelques liens utiles :';
-            font-family: 'Constantine';
-            font-size: small;
+            font-family: sans-serif;
+            // font-size: small;
             color: white;
             transform: translateY(-50%);
             // position: absolute;

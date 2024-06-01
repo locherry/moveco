@@ -1,98 +1,3 @@
-//ChatBubble Animation
-
-const chatBubble = document.querySelector(".chat-bubble");
-const chatTexts = document.querySelectorAll(".chat-bubble p-data");
-const nextBtn = document.querySelector("button.next");
-const prevBtn = document.querySelector("button.previous");
-
-let chatNumber = 0;
-let typeSpeed = 30;
-let isTyping = false;
-
-function type(chatNumber) {
-  if (document.querySelector(".chat-bubble p")) {
-    document.querySelector(".chat-bubble p").remove();
-  }
-
-  newP = document.createElement("p");
-  chatBubble.insertBefore(newP, chatBubble.firstChild);
-
-  letters = textToArray(chatTexts[chatNumber].innerHTML);
-
-  let i = 0;
-
-  if (isTyping) {
-    if (typeof letterAdder != "undefined") {
-      clearInterval(letterAdder);
-    }
-  }
-
-  letterAdder = setInterval(() => {
-    isTyping = true;
-
-    letter = letters[i];
-    newP.innerHTML = newP.innerHTML + letter;
-    i++;
-    document.querySelector(".chat-bubble").click();
-    if (i == letters.length - 1) {
-      clearInterval(letterAdder);
-      isTyping = false;
-    }
-  }, typeSpeed);
-
-  // disable or reable arrow button
-  if (chatNumber == 0) {
-    prevBtn.setAttribute("disabled", "");
-  } else if (chatNumber == chatTexts.length - 1) {
-    nextBtn.setAttribute("disabled", "");
-  }
-}
-
-function textToArray(text) {
-  array = text.split("").map((e, i) => {
-    if (e != "<" && text[i + 1] != ">" && text[i + 2] != ">" && e != ">") {
-      return e;
-    } else if (
-      e == "<" &&
-      text[i + 1] == "b" &&
-      text[i + 2] == "r" &&
-      text[i + 3] == ">"
-    ) {
-      return "<br>";
-    }
-    return "";
-  });
-  let filteredArray = array.filter(
-    (letter, i) =>
-      (letter !== " " || array[i + 1] !== " ") && letter != "\n" && letter != ""
-  );
-  return filteredArray;
-}
-
-nextBtn.addEventListener("click", (e) => {
-  chatNumber += 1;
-  type(chatNumber);
-  if (prevBtn.hasAttribute("disabled")) {
-    prevBtn.removeAttribute("disabled");
-  }
-  if (nextBtn.classList.contains("pulse")) {
-    nextBtn.classList.remove("pulse");
-  }
-});
-
-prevBtn.addEventListener("click", (e) => {
-  chatNumber -= 1;
-  type(chatNumber);
-  if (nextBtn.hasAttribute("disabled")) {
-    nextBtn.removeAttribute("disabled");
-  }
-  // disable or reable arrow button
-});
-
-setTimeout(() => {
-  type(chatNumber);
-}, 3000);
-
 // Review caroussel
 
 // vars
@@ -150,6 +55,7 @@ window.onload = function () {
       }, testimSpeed * 6);
     }
   }
+
   // testimTimer = setInterval(() => {
   //   console.log(document.activeElement);
   //   if (document.activeElement != testim.querySelector(".wrap")) {
@@ -222,20 +128,8 @@ hamburger.addEventListener("click", menuActivate);
 menu.addEventListener("click", menuActivate);
 
 // Auto highlight active section
-
-// newSpan = document.createElement("span");
-// newSpan.style.position = "fixed";
-// newSpan.style.backgroundColor = "red";
-// newSpan.style.height = "2px";
-// newSpan.style.width = "100%";
-// newSpan.style.top = "50%";
-// newSpan.style.left = "0";
-// document.querySelector("body").appendChild(newSpan);
-
 const options = {
-  // root: document.querySelector("#scrollArea"),
   rootMargin: "-50% 0px",
-  // threshold: 1.0,
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -265,6 +159,11 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
+// Loader
+loadingTime = 300
+
+document.querySelector('a.nav-brand').setAttribute('data-aos-delay',loadingTime)
+
 document.addEventListener("DOMContentLoaded", function () {
   document.documentElement.style.overflow = "hidden";
   setTimeout(() => {
@@ -272,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelector(".loading-screen").classList.add("invisible");
     window.scrollTo(0, 0);
-  }, 3000);
+  }, loadingTime);
 });
 
 // typing animation
