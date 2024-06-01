@@ -1,0 +1,16 @@
+footer {
+    background-color: white;
+    padding: 1em 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    p,a {
+        font-family: 'Constantine', sans-serif;
+        text-align: center;
+    }
+
+    a {
+        margin-top: .5em;
+        color: dodgerblue;
+    }
+}

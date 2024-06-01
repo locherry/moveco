@@ -1,0 +1,442 @@
+.agricola-bubble {
+    // height: 50vh;
+    position: relative;
+    padding: 1em;
+    max-width: 700px;
+    margin: 0 auto;
+    min-height: 50vh;
+
+    div.chat-bubble {
+        position: relative;
+        padding: 1em;
+        background-color: white;
+        border-radius: 1em;
+        max-width: 50%;
+        min-height: 1em;
+        z-index: 2;
+
+        p {
+            font-family: 'Constantine', sans-serif;
+        }
+
+        p-data {
+            display: none;
+            // &:first-child {
+            //     display: initial;
+
+            // }
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: right;
+            margin-top: .5rem;
+
+            button {
+                cursor: pointer;
+                margin-left: .3em;
+                text-align: center;
+                border: 1px solid transparent;
+                padding: .375rem .75rem;
+                font-size: 1rem;
+                border-radius: .25rem;
+                text-decoration: none;
+                transition: all .3s ease-in-out;
+                font-weight: bold;
+                position: relative;
+                z-index: 3;
+
+                &:hover {
+                    color: #fff;
+                    background-color: #0b5ed7;
+                    border-color: #0a58ca;
+                }
+
+                &:focus {
+                    color: #fff;
+                    background-color: #0b5ed7;
+                    border-color: #0a58ca;
+                    box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, .5);
+                }
+
+                &:disabled {
+                    cursor: auto;
+                    color: grey;
+                    background-color: initial;
+                    border-color: initial;
+                    box-shadow: initial;
+                }
+
+                &.pulse {
+
+                    &:hover::before,
+                    &:hover::after,
+                    &:focus::before,
+                    &:focus::after {
+                        background-color: #0a58ca;
+                    }
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: -1;
+                        border-radius: .25rem;
+                        animation-delay: 6s;
+                        opacity: 0;
+                        background-color: orangered;
+                        transition: all .3s;
+                    }
+
+                    &::before {
+                        animation: pulsing 2s linear infinite;
+                        animation-delay: 8s;
+
+                    }
+
+                    &::after {
+                        animation: pulsing2 2s linear infinite;
+                        animation-delay: 8s;
+                    }
+                }
+
+                @keyframes pulsing {
+                    0% {
+                        opacity: 1;
+                        transform: scaleY(1) scaleX(1);
+
+                    }
+
+                    20% {
+                        opacity: 0.5;
+                    }
+
+                    70% {
+                        opacity: 0.2;
+                        transform: scaleY(1.4) scaleX(1.4);
+                    }
+
+                    80% {
+                        opacity: 0;
+                        transform: scaleY(1.4) scaleX(1.4);
+                    }
+
+                    90% {
+                        opacity: 0;
+                        transform: scaleY(1) scaleX(1);
+                    }
+                }
+
+                @keyframes pulsing2 {
+                    0% {
+                        opacity: 1;
+                        transform: scaleY(1) scaleX(1);
+                    }
+
+                    20% {
+                        opacity: 0.5;
+                    }
+
+                    70% {
+                        opacity: 0.2;
+                        transform: scaleY(1.8) scaleX(1.8);
+                    }
+
+                    80% {
+                        opacity: 0;
+                        transform: scaleY(1.8) scaleX(1.8);
+                    }
+
+                    90% {
+                        opacity: 0;
+                        transform: scaleY(1) scaleX(1);
+                    }
+                }
+
+                // span {
+                //     background-color: slategrey;
+                //     position: absolute;
+                //     top: 120%;
+                //     left:50%;
+                //     transform: translate(-50%);
+                // }
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            // width: 20px;
+            // height:20px;
+            top: 30%;
+            left: 100%;
+            transform: rotate(135deg) translateX(30px);
+            border-left: 20px solid white;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-top: 20px solid transparent;
+        }
+    }
+
+    img {
+        position: absolute;
+        right: 0;
+        bottom: 5%;
+        height: 90%;
+        border-radius: 40px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .agricola-bubble {
+        height: 100%;
+        position: relative;
+        padding: 1em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div.chat-bubble {
+            position: relative;
+            max-width: none;
+            margin-bottom: .5em;
+
+            &::after {
+                transform: rotate(225deg) translateY(-20px);
+                top: unset;
+                bottom: 0;
+                left: 60%;
+            }
+        }
+
+        img {
+            position: inherit;
+            height: 300px;
+        }
+    }
+}
+
+
+.waves-container {
+    &.reverse {
+        transform: scaleY(-1);
+    }
+
+    .flex {
+        /*Flexbox for containers*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .waves {
+        position: relative;
+        width: 100%;
+        height: 15vh;
+        margin-bottom: -7px;
+        /*Fix for safari gap*/
+        min-height: 100px;
+        max-height: 150px;
+    }
+
+    .content {
+        position: relative;
+        height: 20vh;
+        text-align: center;
+        background-color: white;
+    }
+
+    .parallax>use {
+        animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+    }
+
+    .parallax>use:nth-child(1) {
+        animation-delay: -2s;
+        animation-duration: 7s;
+    }
+
+    .parallax>use:nth-child(2) {
+        animation-delay: -3s;
+        animation-duration: 10s;
+    }
+
+    .parallax>use:nth-child(3) {
+        animation-delay: -4s;
+        animation-duration: 13s;
+    }
+
+    .parallax>use:nth-child(4) {
+        animation-delay: -5s;
+        animation-duration: 20s;
+    }
+
+    @keyframes move-forever {
+        0% {
+            transform: translate3d(-90px, 0, 0);
+        }
+
+        100% {
+            transform: translate3d(85px, 0, 0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .waves {
+            height: 40px;
+            min-height: 40px;
+        }
+
+        .content {
+            height: 30vh;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+    }
+}
+
+.typing-container {
+
+    h1 {
+        font-size: 2.5rem;
+        padding: 0.5rem;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        text-align: center;
+        overflow: hidden;
+
+        span.typed-text {
+            font-weight: normal;
+            color: #dd7732;
+        }
+
+        span.cursor {
+            display: inline-block;
+            background-color: #ccc;
+            margin-left: 0.1rem;
+            width: 3px;
+            animation: blink 1s infinite;
+
+            &.typing {
+                animation: none;
+            }
+        }
+    }
+
+    @keyframes blink {
+        0% {
+            background-color: #ccc;
+        }
+
+        49% {
+            background-color: #ccc;
+        }
+
+        50% {
+            background-color: transparent;
+        }
+
+        99% {
+            background-color: transparent;
+        }
+
+        100% {
+            background-color: #ccc;
+        }
+    }
+}
+
+blockquote {
+    $block-color:rgb(127, 171, 219);
+    padding: 1em;
+    position: relative;
+    margin-top: 1em;
+    padding-bottom: 3em;
+    border-radius: 8px;
+    cursor: help;
+    margin-bottom: 4em;
+    background-color: $block-color;
+    background: linear-gradient(60deg, rgba(84, 58, 183, 1) -20%, rgba(0, 172, 193, 1) 120%);
+    color: white;
+    &:hover {
+        p.tooltip {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    p {
+        text-indent: 2rem;
+        position: relative;
+        &.quote{
+            font-family: 'Constantine', sans-serif;
+        }
+        &.reference {
+            text-align: right;
+            // color: #2b2b2b;
+            opacity: .8;
+            margin-top: .375rem;
+        }
+
+        &.tooltip {
+            text-indent: 0rem;
+            position: absolute;
+            background-color: $block-color;
+            top: 100%;
+            left: 0;
+            margin-top: 20px;
+            border-radius: 8px;
+            padding: 1em;
+            transform: translateY(-20%);
+            transition: all .3s;
+            opacity: 0;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                left: 50%;
+                top: -8px;
+                background-color: $block-color;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &::before {
+        content: '❝';
+        color: #fafafa;
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        font-size: 2.5em;
+    }
+
+    &::after {
+        content: '❠';
+        color: #fafafa;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .quote-heading{
+        margin-top: 4em;
+    }
+    p.quote{
+        
+        font-size: 20px;
+    }
+    p.tooltip{
+        margin: 0 70px;
+    }
+}

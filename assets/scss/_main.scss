@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+main {
+    background-color: lightblue;
+}
+
+footer {
+    overflow: hidden;
+}
+
+section {
+    overflow: hidden;
+    .section-content {
+        padding: 4em 10%;
+    }
+
+    &#home {
+        padding-top: 4em;
+        background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    }
+    
+    &#testim {
+        color: white;
+        background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    }
+}
+
+// .section-changer {
+//     // border: 100px solid dodgerblue;
+//     position: relative;
+//     transform: scaleY(0.5);
+//     transform: translate(0, 20);
+
+
+//     svg {
+//         margin: 0;
+//         z-index: 99999999999;
+//         bottom: 100%;
+//         left: 0;
+//         position: absolute;
+
+//         use {
+//             fill: dodgerblue;
+//             stroke: dodgerblue;
+//             // stroke-width: 20;
+//         }
+//     }
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Constantine';
+}
+
+
+p,
+a{
+    font-family: sans-serif;
+}
+
+h1{
+    font-size:2em;
+}
+p {
+    text-align: justify;
+}
+
+@font-face {
+    font-family: 'Constantine';
+    src: url('../font/Constantine.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

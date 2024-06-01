@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+    <title>Tacite - Agricola | critique</title>
+    <style>
+      #legal .section-content {
+        min-height: 100vh;
+        padding-top: 8em;
+      }
+    </style>
+    <!-- Needed for AOS animation on scroll behaviour -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  
+  </head>
+  <body>
+    <div class="loading-screen">
+      <div class="loading-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <span>Loading</span>
+      </div>
+    </div>
+    <header>
+      <nav>
+        <svg class="hamburger" viewBox="0 0 100 100">
+          <path
+            class="line top"
+            d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
+          ></path>
+          <path class="line" d="m 70,50 h -40"></path>
+          <path
+            class="line bottom"
+            d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
+          ></path>
+        </svg>
+        <a class="nav-brand" href="./#"> Tacite - Agricola </a>
+        <div class="nav-list">
+          <a href="./#home" class="nav-link">Accueil</a>
+          <a href="./#atypique-mark" class="nav-link">Une Bédé atypique</a>
+          <a href="./#testimonial-mark" class="nav-link">Notre avis</a>
+        </div>
+        <div></div>
+      </nav>
+    </header>
+    <main>
+      <section id="legal">
+        <div class="section-content">
+          <h1>Mentions légales</h1>
+          <p>
+            Projet réalisé par des lycéens dans le cadre d'un concours de
+            lecture antique
+          </p>
+          <br />
+          <h3>Crédits :</h3>
+          <p>
+            Certains icons proviennent de
+            <a href="https://icons8.com/icon/set/people/bubbles">icons8</a>
+          </p>
+          <p>
+            Les images provennant de la bande dessinée sont soumises à des
+            droits d'auteurs, s'addresser à ses createurs
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        © Copyright 2023 :Adrien ALLAIS - Aloys CHERRIER - Charles
+       STAUFFER || TOUS DROITS RÉSERVÉS POUR TOUS PAYS
+      </p>
+      <a href="legal.html">mentions légales</a>
+    </footer>
+  </body>
+
+  <script>
+    // Activate mobile menu
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".nav-list");
+
+    const menuActivate = function () {
+      hamburger.classList.toggle("active");
+      menu.classList.toggle("active");
+    };
+
+    hamburger.addEventListener("click", menuActivate);
+    menu.addEventListener("click", menuActivate);
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.documentElement.style.overflow = "hidden";
+      setTimeout(() => {
+        document.documentElement.style.overflow = "visible";
+
+        document.querySelector(".loading-screen").classList.add("invisible");
+        window.scrollTo(0, 0);
+      }, 3000);
+    });
+  </script>
+</html>

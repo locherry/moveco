@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+    <title>Tacite - Agricola | critique</title>
+    <script src="./assets/js/script.js" defer></script>
+
+    <!-- Needed for AOS animation on scroll behaviour -->
+    <script src="./assets/js/lib/aos.js"></script>
+  </head>
+  <body>
+    <div class="loading-screen">
+      <div class="loading-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <span>Loading</span>
+      </div>
+    </div>
+    <header>
+      <nav data-aos="fade-down">
+        <svg class="hamburger" viewBox="0 0 100 100">
+          <path
+            class="line top"
+            d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
+          ></path>
+          <path class="line" d="m 70,50 h -40"></path>
+          <path
+            class="line bottom"
+            d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
+          ></path>
+        </svg>
+        <a
+          class="nav-brand"
+          href="./#"
+          data-aos="fade-right"
+          data-aos-delay="3000"
+        >
+          Tacite - Agricola
+        </a>
+        <div class="nav-list">
+          <a href="./#home" class="nav-link">Accueil</a>
+          <a href="./#atypique-mark" class="nav-link">Une Bédé atypique</a>
+          <a href="./#testimonial-mark" class="nav-link">Notre avis</a>
+        </div>
+        <div></div>
+      </nav>
+      <a
+        href="./#home"
+        class="scroll-top"
+        title="remonter jusqu'en haut de la page"
+      ></a>
+    </header>
+    <main>
+      <section id="home">
+        <div class="section-content">
+          <div
+            class="agricola-bubble"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-anchor-placement="top-center"
+            data-aos-delay="3000"
+          >
+            <div class="chat-bubble">
+              <p-data>
+                Bienvenue, je suis Agricola,
+                <br />
+                Tacite, mon gendre vous a sans doute déjà parlé de moi. Enfin,
+                c'était sûrement un prétexte pour écrire un livre sur la
+                géographie de la Bretagne...
+              </p-data>
+              <p-data>
+                Je suis, à présent votre guide pour votre navigation sur le
+                site. Pour en savoir plus sur mon histoire continuez à
+                m'écouter, et pour avoir un aperçu de la BD, faites défiler la
+                page !
+              </p-data>
+              <p-data>
+                Laissez-moi vous raconter mon histoire :
+                <br />
+                Je suis issu d'une famille de notables gallo-romains de sang
+                sénatorial. Après avoir fait mes études à Massilia, j'ai servi
+                l'empire comme tribun en Bretagne et questeur en Asie.
+              </p-data>
+              <p-data>
+                Mais c'est après mon soutient à Vespasien pendant l'année des
+                quatre empereurs que tout s'accélère, j'ai obtenu un
+                commandement militaire en Bretagne et c'est au terme de
+                plusieurs campagnes victorieuses que les frontières romaines
+                sont repoussées jusqu'en écosse.
+              </p-data>
+              <p-data>
+                Malheureusement, le succès et la popularité attirent jalousie et
+                convoitise. Depuis quelque temps, j'ai le pressentiment que
+                quelque chose de fâcheux pourrait arriver.
+              </p-data>
+              <div class="button-container">
+                <button class="arrow previous" title="précédent" disabled="">
+                  &lt;
+                </button>
+                <button class="arrow next pulse" title="suivant">&gt;<!--<span>clique moi</span>--></button>
+              </div>
+            </div>
+            <img src="./assets/img/agricola.png" alt="" />
+          </div>
+        </div>
+
+        <div id="atypique-mark" class="waves-container">
+          <svg
+            class="waves"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28"
+            preserveAspectRatio="none"
+            shape-rendering="auto"
+          >
+            <defs>
+              <path
+                id="gentle-wave"
+                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+              />
+            </defs>
+            <g class="parallax">
+              <use
+                xlink:href="#gentle-wave"
+                x="48"
+                y="0"
+                fill="rgba(255,255,255,0.7"
+              />
+              <use
+                xlink:href="#gentle-wave"
+                x="48"
+                y="3"
+                fill="rgba(255,255,255,0.5)"
+              />
+              <use
+                xlink:href="#gentle-wave"
+                x="48"
+                y="5"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+          </svg>
+        </div>
+      </section>
+      <!-- <div class="section-changer">
+        <svg viewBox="0 0 612 94.6">
+          <use href="./assets/img/curve.svg#curve" />
+        </svg>
+      </div> -->
+      <section id="atypique">
+        <div class="section-content">
+          <div data-aos="fade-up" data-aos="zoom-in-right">
+            <div class="typing-container">
+              <h1>Une bande dessinée <span class="typed-text" data-text="atypique; inspirante; épique; poignante; émouvante; moderne"></span><span class="cursor">&nbsp;</span></h1>
+            </div>
+            <p>
+              <i>Agricola</i>  est une bande dessinée parue en 2022. Ecrite par Edourd Michel et dessinée par Sacha Cambier de Montravel, cette œuvre restitue une partie de De Vita Agricolae, un ouvrage de Tacite décrivant la vie de son beau père Agricola. Parue aux éditions Rue d'Ulm, cette BD est proposée par le Prix Littérature Jeunesse Antiquité 2023 d'Arrête ton char dans la catégorie BD et manga pour lycéens et adultes. L'album est composée de 90 pages et contient la bande dessinée ainsi que le texte latin de Tony Woodman (latiniste britannique) et sa traduction française effectuée par Edouard Michel. Complétée par un lexique, cette bande dessinée illustre l'impressionnante ascension sociale vécue par Agricola dans la société romaine ainsi que tout ce qu'elle engendre.
+            </p>
+            <h2>A propos des auteurs</h2>
+            <div class="author-card-container">
+            <div class="author-card" data-aos="fade-up">
+              <div class="img">
+                <p class="author-name">Edouard Michel</p>
+              </div>
+              <div class="author-card-text-container">
+
+                <h3>Qui est Edouard Michel ?</h3>
+                <p>
+                  Edouard Michel est administrateur à l'Office parlementaire
+                  d'évaluation des choix scientifiques et technologiques à
+                  l'Assemblée nationale. Il s'agit d'un ancien élève de l'École
+                  normale supérieure et latiniste. Il a intégré le département de
+                  littératures et langage de l’École en 1997 puis il a choisit de
+                  s'orienter vers le droit. Latiniste accompli et passionné par
+                  l’Antiquité, Edouard Michel choisit une carrière au cœur des
+                  politiques européennes contemporaines. En 2014, la nouvelle
+                  édition de l’Agricola de Tacite par Tony Woodman a incité Edouard
+                  Michel à traduire cette œuvre à nouveaux frais, avant de la
+                  transposer en images.
+                </p>
+              </div>
+          </div>
+            <div class="author-card" data-aos="fade-up">
+              <div class="img">
+                <p class="author-name">Sacha Cambier de Montravel</p>
+              </div>
+              <div class="author-card-text-container">
+                <h3>Qui est Sacha Cambier de Montravel ?</h3>
+                <p>
+                  Sacha Cambier de Montravel est peintre et illsutrateur. Il est
+                diplômé des Beaux-Arts de Paris et de la Cambre à Bruxelles. Il
+                utilise des techniques anciennes de mieux exprimer son point de
+                vue sur de notre époque. Il n'hésite pas non plus à utiliser la
+                forme caricaturale de la bande dessinée pour s'exprimer.
+                </p>
+              </div>
+          </div>
+        </div>
+        </div>
+          <br />
+          <div>
+            <h2 data-aos="fade-up">Une narration d'un point de vue inhabituel</h2>
+            <p data-aos="fade-up">
+              L’histoire ici est bien évidemment rapportée par Tacite, mais le point de vue de Tacite est d’autant plus particulier qu’il n’a pas lui même vécu les événements qu’il décrit.
+              Ici le héros est un personnage ayant réellement existé mais on peut supposer qu’une partie du récit ait été romancée, alors que l’aspect militaire de la vie de Tacite est un thème central de l’œuvre, et donc que de fait Tacite ne pouvait être présent.  Ainsi adapter ce récit en bande dessinée tout en gardant quelque peu l’esprit de l’œuvre originelle avec son point de vue si particulier était sans aucun doute un tâche complexe.
+            </p>
+            <div class="large-book-container" data-aos="fade-up-right">
+              <div class="book-container">
+                <div id="book">
+                  <div id="top"></div>
+                  <div id="front"></div>
+                  <div id="right"></div>
+                  <div id="bottom"></div>
+                  <div id="shadow"></div>
+                  <div id="bookmark">
+                    <div>
+                      <div>
+                        <div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="bookmark-shadow"></div>
+                </div>
+                <div id="flip">
+                  <div id="front">
+                    <div>
+                      <div>
+                        <div>
+                          <div>
+                            <div>
+                              <div>
+                                <div>
+                                  <div>
+                                    <div>
+                                      <div></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="back">
+                    <div>
+                      <div>
+                        <div>
+                          <div>
+                            <div>
+                              <div>
+                                <div>
+                                  <div>
+                                    <div>
+                                      <div></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <br>
+          <div data-aos="fade-up" data-aos="zoom-in-right">
+            <h2>Une édition très complète</h2>
+            <p>
+              L’association d’une bande dessinée, du texte originale et de sa traduction suivie d’un glossaire rend cette édition tout à fait unique. La Bande dessinée bien que déjà intéressante en elle même semble être là pour pousser tout lecteur curieux à lire ne serait-ce que quelques lignes du texte traduit voir du texte latin. Cette manière de procéder est à mon sens une très bonne manière d’inciter le grand public à découvrir des œuvres antiques en les reprenant. Cela confère à la bande dessinée une valeur plus grande encore, puisqu’elle joue le rôle de lien entre les œuvres actuelles et les œuvres antiques, le concept est donc très intéressant. De plus le livre n’est pas une édition de poche, il est en lui même intéressant, la couverture est très esthétique, et malgré le fait qu’elle ne semble pas représenté clairement un élément de l’histoire, elle cultive la curiosité d’un lecteur qui ne connaîtrais pas l’œuvre originale.          
+            </p>
+          </div>
+          <h2 class="quote-heading">À retenir</h2>
+          <blockquote>
+            <p class="quote">
+              Memoriam quoque ipsam cum uoce perdidissemus, si tam in nostra potestate esset obliuisci quam tacere.
+            </p>
+            <p class="reference">Tacite, <i>Vie d'Agricola</i></p>
+            <p class="tooltip">
+              Traduction: Tout comme la parole, nous aurions volontier perdu la mémoire elle-même si, non seulement de nous taire nous étions capables d'oublier.
+            </p>
+          </blockquote>
+        </div>
+      </section>
+      <section id="testim" class="testim">
+        <div id="testimonial-mark" class="waves-container reverse">
+          <svg
+            class="waves"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28"
+            preserveAspectRatio="none"
+            shape-rendering="auto"
+          >
+            <defs>
+              <path
+                id="gentle-wave"
+                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+              />
+            </defs>
+            <g class="parallax">
+              <use
+                xlink:href="#gentle-wave"
+                x="48"
+                y="0"
+                fill="rgba(255,255,255,0.7"
+              />
+              <use
+                xlink:href="#gentle-wave"
+                x="48"
+                y="3"
+                fill="rgba(255,255,255,0.5)"
+              />
+              <use
+                xlink:href="#gentle-wave"
+                x="48"
+                y="5"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+          </svg>
+        </div>
+        <!-- <div class="section-content"> -->
+        <h1 data-aos="fade-up">Notre Avis</h1>
+
+        <div class="wrap" data-aos="fade-up" tabindex="1">
+          <span id="left-arrow" class="arrow left">&lt;</span>
+          <span id="right-arrow" class="arrow right">&gt;</span>
+          <ul id="testim-dots" class="dots">
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <!-- <li class="dot"></li> -->
+          </ul>
+          <div id="testim-content" class="cont">
+            <div class="testim-card">
+              <div class="img">
+                <img src="./assets/img/adrien.png" alt="" />
+              </div>
+              <h2>Adrien Allais</h2>
+              <h3>Elève de terminale</h3>
+              <p>
+                Cet ouvrage est une belle découverte, l'idée d'adapter De Vita
+                Agricolae en bande dessinée est vraiment très bonne et permet de
+                toucher à l'ouvrage d'un grand historien et écrivain latin, et
+                ce, de manière accessible. Les parties de l'oeuvre mises sous
+                forme de bande dessinée sont bien retranscrites et les détails
+                dans les dessins sont multiples et bien intégrés. Le choix d'un
+                dessin caricatural est lui aussi intéressant même s'il ne fait
+                pas forcément l'unanimité. Le choix des couleurs de la bande
+                dessinée est superbe ce qui rend la lecture encore plus
+                agréable. Un des aspects les plus plaisants de cet ouvrage est
+                aussi la présence d'un lexique extrêment riche qui complète très
+                bien le contenu de la bande dessinée. Il y a néanmoins un léger
+                bémol qui est le manque de lien entre les différentes parties de
+                l'oeuvre. Il peut rendre la lecture difficile si l'on a pas lu
+                l'oeuvre originale et peut nous faire rater des détails dans les
+                dessins. Néanmoins ce manque s'avère aussi être force puisqu'il
+                nous incite à lire le texte original de Tacite en latin ou en
+                français qui est lui aussi présent dans l'ouvrage.
+              </p>
+            </div>
+
+            <div class="testim-card">
+              <div class="img">
+                <img src="./assets/img/user-male.png" alt="" />
+              </div>
+              <h2>Charles STAUFFER</h2>
+              <h3>Elève de terminale</h3>
+              <p>
+                L’œuvre de Sacha Cambier de Montravel et de 	Edouard Michel est une œuvre extrêmement intéressante, car même si l’on retrouve dans d’autres ouvrages proposés au Prix Littérature Jeunesse Antiquité l’idée de reprendre des écrits antiques sous une autre forme, celle-ci réussit à sortir son épingle du jeu en amenant, par son édition avec sa traduction du texte original, une découverte d’une part de la culture antique romaine. Mon opinion sur la bande dessinée en elle même est malgré tout assez critique puisque, étant un grand lecteur de bande dessinée, le manque de réalisme du dessin me perturbe. Ce choix est intéressant et les couleurs me plaisent tout de même, mais je trouve que cette manière de représenter l’œuvre de Tacite amène presque un coté ridicule alors que je lui aurais préféré une manière de représenter les personnages, les batailles, plus proche de la réalité, ce qui aurait accentué je pense le côté tragique de certains passages. Néanmoins j’ai bien conscience que mon avis est fortement influencé par ma lecture de la traduction qui m’inspire une atmosphère épique. 
+              </p>
+            </div>
+            <div class="testim-card">
+              <div class="img">
+                <img src="./assets/img/aloys.png" alt="" />
+              </div>
+              <h2>Aloys Cherrier</h2>
+              <h3>Elève de terminale</h3>
+              <p>
+                Cette bande dessinée a pour ambition de faire ressentir
+                l’atmosphère et les décors riches de l’antiquité romaine. Pour
+                cela les auteurs ont réussi à rester aussi fidèles que possible au texte
+                latin de Tacite tout en y mêlant une liberté d’interprétation
+                visuelle. Ils réussissent à rendre vivant et captivant
+                un récit qui pourrait sembler austère ou daté grâce au dynamisme
+                de la bande dessinée et à la mise en scène des personnages pris
+                dans des intrigues politiques de l’empire et en illustrant des
+                paysages grandioses, théâtres de batailles épiques. Cet ouvrage
+                permet la diffusion de la littérature antique sous un angle
+                nouveau et attrayant, en permettant ainsi de rendre ces textes
+                accessibles aux plus grands nombres. Cette bande dessinée est
+                donc à la fois une introduction accessible et ludique à la
+                culture latine, et une invitation à découvrir ou redécouvrir un
+                chef-d'œuvre de la littérature antique, qui mêle histoire,
+                biographie et réflexion politique.
+              </p>
+            </div>
+            <!-- <div class="testim-card">
+              <div class="img">
+                <img src="./assets/img/elvis-presley.png" alt="" />
+              </div>
+              <h2>Elvis Presley</h2>
+              <h3>Mec Random</h3>
+              <p>
+                Veritatis expedita voluptates numquam temporibus perspiciatis
+                vitae sequi laudantium corporis dolor ex! Perspiciatis
+                voluptates iusto explicabo non maxime aspernatur, ipsum labore
+                nesciunt, qui quibusdam delectus, dolores sint magni laudantium
+                quos? Fugiat sunt necessitatibus porro cum molestias. Maxime nam
+                tempora ab iste eveniet, consectetur, totam aspernatur explicabo
+                officia quibusdam, fugiat quaerat eum ipsa.
+              </p>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        © Copyright 2023 : Adrien ALLAIS - Aloys CHERRIER - Charles STAUFFER ||
+        TOUS DROITS RÉSERVÉS POUR TOUS PAYS
+      </p>
+      <a href="legal.html">mentions légales</a>
+    </footer>
+  </body>
+  <script>
+    AOS.init();
+  </script>
+</html>

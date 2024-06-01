@@ -1,0 +1,431 @@
+$animation-duration : 20s;
+
+.large-book-container {
+  position: relative;
+  width: 250px;
+  height: 270px;
+  float: left;
+  margin-right: 2em;
+}
+
+.book-container {
+  perspective: 900px;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  transform: scale(0.5) translate(-50%, -45%);
+  // border: 1px solid green;
+  margin: 0;
+  padding: 0;
+
+  #flip {
+    height: 350px;
+    width: 253px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateZ(-10px) rotateX(60deg) rotateZ(29deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    transform-origin: 0 0 0;
+  }
+
+  #flip div {
+    height: 350px;
+    width: 24px;
+    position: absolute;
+    left: calc(100% - 1px);
+    transform-origin: 0 100%;
+    transform-style: preserve-3d;
+    background-size: 253px 350px;
+  }
+
+  #flip #front,
+  #flip #front div {
+    background-image: url('../img/couverture.jpg');
+    box-shadow: inset rgba(255, 255, 255, 0.3) 0px -1px 0 0,
+      #35582c 0px 1px 0px 0px;
+  }
+
+  #flip #front>div>div>div>div>div>div>div>div>div>div {
+    box-shadow: inset rgba(255, 255, 255, 0.3) -1px -1px 0 0,
+      #35582c 1px 1px 0px 0px;
+  }
+
+  #flip #back {
+    transform: rotateY(0.4deg);
+    transform-origin: -100% 0;
+  }
+
+  /* avoid pages overlap */
+  #flip #back,
+  #flip #back div {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/164210/map1_.jpg);
+  }
+
+  #flip>div {
+    left: 0;
+    background-position-x: 0;
+  }
+
+  #flip div>div {
+    background-position-x: -23px;
+    animation: page $animation-duration ease-in-out infinite;
+  }
+
+  #flip div>div>div {
+    background-position-x: -46px;
+  }
+
+  #flip div>div>div>div {
+    background-position-x: -69px;
+  }
+
+  #flip div>div>div>div>div {
+    background-position-x: -92px;
+  }
+
+  #flip div>div>div>div>div>div {
+    background-position-x: -115px;
+  }
+
+  #flip div>div>div>div>div>div>div {
+    background-position-x: -138px;
+  }
+
+  #flip div>div>div>div>div>div>div>div {
+    background-position-x: -161px;
+  }
+
+  #flip div>div>div>div>div>div>div>div>div {
+    background-position-x: -184px;
+  }
+
+  #flip div>div>div>div>div>div>div>div>div>div {
+    background-position-x: -207px;
+  }
+
+  #flip div>div>div>div>div>div>div>div>div>div>div {
+    background-position-x: -229px;
+  }
+
+  /* the more pieces you have, the smoother the bend is */
+
+  @keyframes page {
+
+    10% {
+      transform: rotateY(0deg);
+    }
+
+    25% {
+      transform: rotateY(-15deg);
+    }
+
+    50% {
+      transform: rotateY(-2deg);
+    }
+
+    65% {
+      transform: rotateY(-10deg);
+    }
+
+    100% {
+      transform: rotateY(0deg);
+    }
+  }
+
+  #book {
+    width: 248px;
+    height: 350px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate3d(0px, 0px, -10px) rotateX(60deg) rotateZ(29deg);
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0 0 0;
+    transform-origin: 0 0 0;
+  }
+
+  @keyframes book {
+
+    10% {
+      box-shadow: inset rgba(0, 0, 0, 0.2) 510px 0 50px -140px;
+    }
+
+    25% {
+      box-shadow: inset rgba(0, 0, 0, 0.2) 0px 0 50px -140px;
+    }
+
+    50% {
+      box-shadow: inset rgba(0, 0, 0, 0.2) 450px 0 50px -140px;
+    }
+
+    65% {
+      box-shadow: inset rgba(0, 0, 0, 0.2) 0px 0 50px -140px;
+    }
+
+    100% {
+      box-shadow: inset rgba(0, 0, 0, 0.2) 510px 0 50px -140px;
+    }
+  }
+
+
+  #book #top {
+    animation: book $animation-duration ease-in-out infinite;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/164210/map2.jpg);
+    background-size: 100% 100%;
+    background-position: 100%;
+    box-shadow: inset rgba(0, 0, 0, 0.2) 510px 0 50px -140px;
+    height: 350px;
+    width: 248px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  #book #bottom {
+    background: #e7ded1;
+    box-shadow: rgba(83, 53, 13, 0.2) 4px 2px 1px, #35582c 1px 1px 0px 0px;
+    height: 350px;
+    width: 253px;
+    position: absolute;
+    transform: translateZ(-40px);
+    left: 0;
+    top: 0;
+  }
+
+  #book #shadow {
+    animation: shadow $animation-duration ease-in-out infinite;
+    box-shadow: inset rgba(83, 53, 13, 0) -200px 0 150px -140px;
+    height: 350px;
+    width: 248px;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    transform: translateZ(-40px);
+  }
+
+  @keyframes shadow {
+    $initial-state: inset rgba(83, 53, 13, 0) -200px 0 150px -140px;
+
+    10% {
+      box-shadow: $initial-state;
+    }
+
+    25% {
+      box-shadow: inset rgba(83, 53, 13, 0.3) -350px 0 150px -140px;
+    }
+
+    50% {
+      box-shadow: $initial-state;
+    }
+
+    65% {
+      box-shadow: inset rgba(83, 53, 13, 0.3) -350px 0 150px -140px;
+    }
+
+    80% {
+      box-shadow: $initial-state;
+    }
+  }
+
+  #book #front {
+    background: -webkit-linear-gradient(top, #fcf6ea, #d8d1c3);
+    background-size: 100% 2px;
+    box-shadow: inset #c2bba2 3px 0 0px, #35582c -2px 1px 0px 0px;
+    height: 40px;
+    width: 251px;
+    left: -3px;
+    position: absolute;
+    bottom: -40px;
+    transform: rotateX(-90deg);
+    transform-origin: 50% 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  #book #right {
+    background: -webkit-linear-gradient(left, #ddd2bb, #bdb3a0);
+    background-size: 2px 100%;
+    box-shadow: inset rgba(0, 0, 0, 0) 0 0 0 20px;
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    transform: rotateY(90deg);
+    transform-origin: 0 50%;
+  }
+
+  h4 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    font-weight: 200;
+    opacity: 1;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  /* bookmark */
+
+  #bookmark {
+    position: absolute;
+    transform: translate3d(20px, 350px, -16px);
+    transform-style: preserve-3d;
+  }
+
+  #bookmark div {
+    background: rgb(151, 88, 88);
+    box-shadow: rgb(133, 77, 77) 1px 0;
+    height: 10px;
+    width: 20px;
+    position: absolute;
+    top: 9px;
+    transform: rotateX(-14deg);
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+  }
+
+  #bookmark>div>div {
+    background: linear-gradient(to top,
+        rgb(151, 88, 88),
+        rgb(189, 123, 123),
+        rgb(151, 88, 88));
+  }
+
+  #bookmark>div>div>div {
+    background: linear-gradient(to top, rgb(151, 88, 88), rgb(133, 77, 77));
+  }
+
+  #bookmark>div>div>div>div {
+    background: none;
+    border-top: 0px solid transparent;
+    border-right: 10px solid rgb(133, 77, 77);
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid rgb(133, 77, 77);
+    height: 0;
+    width: 0;
+  }
+
+  #bookmark-shadow {
+    background: linear-gradient(to top,
+        rgba(83, 53, 13, 0.25),
+        rgba(83, 53, 13, 0.11));
+    height: 15px;
+    width: 20px;
+    position: absolute;
+    transform: translate3d(12px, 350px, -25px) rotateX(-90deg) skewX(20deg);
+    transform-origin: 0 0;
+  }
+}
+
+@media only screen and (max-width:800px) {
+
+  .large-book-container {
+    position: relative;
+    width: 250px;
+    height: 270px;
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+
+section#atypique {
+  padding-top: 0;
+  // border: 4px solid dodgerblue;
+  background-color: white;
+}
+
+.author-card-container {
+  margin-top: 1em;
+
+  .author-card {
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgb(228, 234, 240);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    max-width: 800px;
+    box-shadow: 0 0 0 0 rgba(10, 10, 10, 0.3);
+    transition: all .8s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 10px 3px rgba(70, 70, 70, 0.3);
+
+      .img {
+        background-size: 110%;
+      }
+    }
+
+    .img {
+      width: 300px;
+      min-height: 300px;
+      height: 100%;
+      background-color: black;
+      background-position: center;
+      background-repeat: no-repeat;
+      // background-size: cover;
+      flex-shrink: 0;
+      background-size: 100%;
+      transition: background-size .3s;
+      position: relative;
+      .author-name{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%);
+        font-family: 'constantine', serif;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: .5em;
+        border-radius: 8px;
+      }
+    }
+
+    .author-card-text-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: .5em;
+    }
+
+    &:nth-child(1) {
+      .img {
+        background-image: url("../img/Edouard_Michel.jpg");
+      }
+    }
+
+    &:nth-child(2) {
+      .img {
+        background-image: url("../img/Sacha_Cambier_De_Montravel.jpg");
+      }
+    }
+
+    p,
+    h3 {
+      margin: 10px;
+    }
+
+  }
+}
+
+
+@media only screen and (max-width:800px) {
+
+  .author-card-container .author-card {
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .img {
+      width: 100%;
+      height: 250px;
+    }
+  }
+}
