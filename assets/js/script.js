@@ -160,7 +160,7 @@ sections.forEach((section) => {
 });
 
 // Loader
-loadingTime = 300
+loadingTime = 3000
 
 document.querySelector('a.nav-brand').setAttribute('data-aos-delay',loadingTime)
 
@@ -223,3 +223,24 @@ document.addEventListener("DOMContentLoaded", function () {
     if (textArray.length) setTimeout(type, newTextDelay + 250);
   });
 })();
+
+// contact form
+
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});

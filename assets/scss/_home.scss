@@ -1,9 +1,11 @@
 section#home {
-    background-image: url(../img/tuiles.png);
+    // background-image: url(../img/tuiles.png);
+    background-image: url(../img/tuiles.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
+
     .section-content{
         position: absolute;
         top: 0;
@@ -13,16 +15,15 @@ section#home {
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
+    
     img.title {
         width: 70%;
         max-width: 700px;
         transform: translateY(-50%);
-        // height: 100 vh;
     }
+
     .waves-container{
-        // display: none;
         position: absolute;
         width: 100%;
         bottom: 0;

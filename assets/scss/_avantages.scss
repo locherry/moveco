@@ -1,0 +1,42 @@
+section#avantages {
+    background-color: white;
+
+    h3 {
+        text-align: center;
+
+        // text-transform: uppercase;
+        span.text-primary {
+            color: var(--primary);
+        }
+    }
+    .units-container{
+        display: flex;
+        // flex-direction: ;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .unit {
+        display: flex;
+        max-width: 50%;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 400px;
+        .unit-left {
+            // padding-right: 10px;
+            // border: 1px solid red;
+            svg{
+                width: 100%;
+            }
+            svg path {
+                fill: var(--primary)
+            }
+        }
+        .unit-body{
+            width:80%;
+            padding: 20px;
+            padding-right: 40px;
+            // border: 1px solid red;
+        }
+    }
+}
