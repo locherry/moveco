@@ -180,7 +180,7 @@ nav {
     }
 
     .hamburger.active .line {
-        stroke: #0e7baa;
+        stroke: var(--primary);
     }
 
     .hamburger.active .line.top {

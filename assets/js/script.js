@@ -160,7 +160,7 @@ sections.forEach((section) => {
 });
 
 // Loader
-loadingTime = 3000
+loadingTime = 2000
 
 document.querySelector('a.nav-brand').setAttribute('data-aos-delay',loadingTime)
 

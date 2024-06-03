@@ -231,6 +231,7 @@
         line-height: 35px;
         margin-right: 0.5rem;
         transition: 0.3s;
+        text-decoration: none;
     }
 
     .social-icons a:hover {
@@ -313,9 +314,9 @@
     }
 
     @media (max-width: 480px) {
-        .container {
-            padding: 1.5rem;
-        }
+        // .container {
+        //     padding: 1.5rem;
+        // }
 
         .contact-info:before {
             display: none;

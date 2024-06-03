@@ -1055,7 +1055,6 @@
 .loading-container span {
   position: absolute;
   top: 75px;
-  font-family: "Lato";
   font-size: 20px;
   letter-spacing: 12px;
   color: #fff;
@@ -1105,12 +1104,7 @@ section#testim {
   background: linear-gradient(60deg, var(--primary-d) 0%, var(--primary-l) 100%);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: sans-serif;
-}
-
-p,
-a {
+h1, h2, h3, h4, h5, h6, p, a, input, label, span {
   font-family: sans-serif;
 }
 
@@ -2084,7 +2078,7 @@ nav .nav-brand img.logo {
     transform: rotate(45deg);
   }
   .hamburger.active .line {
-    stroke: #0e7baa;
+    stroke: var(--primary);
   }
   .hamburger.active .line.top {
     stroke-dashoffset: -68px;
@@ -2325,6 +2319,7 @@ section#home .waves-container {
   line-height: 35px;
   margin-right: 0.5rem;
   transition: 0.3s;
+  text-decoration: none;
 }
 #nous-contacter .social-icons a:hover {
   transform: scale(1.05);
@@ -2393,9 +2388,6 @@ section#home .waves-container {
   }
 }
 @media (max-width: 480px) {
-  #nous-contacter .container {
-    padding: 1.5rem;
-  }
   #nous-contacter .contact-info:before {
     display: none;
   }
